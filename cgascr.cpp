@@ -2,7 +2,7 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <math.h>
-//Code created using Gemini
+#include <scrnsave.h>
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
 switch (message) {
@@ -47,7 +47,7 @@ if (!RegisterClassEx(&wc)) {
 
 HWND  
  hWnd = CreateWindowEx(WS_EX_CLIENTEDGE,  
- "OpenGLWindow", "OpenGL Window", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1280, 1280, NULL, NULL, hInstance, NULL);
+ "OpenGLWindow", "OpenGL Window", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1280, 720, NULL, NULL, hInstance, NULL);
 
 if (!hWnd) {
     MessageBox(NULL, "Window Creation Failed!", "Error", MB_ICONEXCLAMATION | MB_OK);
@@ -101,7 +101,7 @@ while (true) {
     //gluSphere(quadric, 1.0, 20, 20);
     //gluDeleteQuadric(quadric);
     glFlush(); 
-    angle += 0.4f;
+    angle += 0.1f;
 
     // Your OpenGL rendering code here
     //glColor3f(1.0f, 0.0f, 0.0f); // Red
