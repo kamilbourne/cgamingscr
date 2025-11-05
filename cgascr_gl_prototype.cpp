@@ -4,11 +4,6 @@
 #include <math.h>
 #include <scrnsave.h>
 
-int Width;
-int Height;
-
-#define TIMER 1
-
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
     switch (message) {
     case WM_CLOSE:
